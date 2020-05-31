@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Avimesa.Live Dashboard</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/box-sizing.css" />
+    <!--<link rel="stylesheet" href="../dist/vue-grid-layout.css">-->
+  </head>
+  <body>
+    <h2 class="page-title">Avimesa Dashboard Prototype</h2>
+    <div id="app" style="width: 100%;">
+      <!--<pre>{{ $data | json }}</pre>-->
+      <div>
+        <!-- <div class="layoutJSON">
+          Displayed as <code>[x, y, w, h]</code>:
+          <div class="columns">
+            <div class="layoutItem" v-for="item in layout">
+              <b>{{item.i}}</b>: [{{item.x}}, {{item.y}}, {{item.w}},
+              {{item.h}}]
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div id="content">
+        <!-- <input type="checkbox" v-model="draggable" /> Draggable
+        <input type="checkbox" v-model="resizable" /> Resizable
+        <input type="checkbox" v-model="responsive" /> Responsive -->
+        <br />
+        <grid-layout
+          :layout.sync="layout"
+          :col-num="12"
+          :row-height="30"
+          :is-draggable="draggable"
+          :is-resizable="resizable"
+          :vertical-compact="true"
+          :use-css-transforms="true"
+          :responsive="responsive"
+        >
+        
+          <grid-item
+            v-for="item in layout"
+            :x="item.x"
+            :y="item.y"
+            :w="item.w"
+            :h="item.h"
+            :i="item.i"
+          >
+            
+
+            <div class="card-content">
+                <div class="card-top-bar w-clearfix">
+                    <h6 class="card-title">{{item.i}}</h6>
+                    <div class="settingsIcon"><img src="images/settings-24px.svg" width="20" alt="" /></div>
+                  </div>
+              <div class="reading-value">{{item.reading}}</div>
+              <div class="reading-label">{{item.readingLabel}}</div>
+            </div>
+          </grid-item>
+        </grid-layout>
+      </div>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="../dist/vue-grid-layout.umd.min.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
