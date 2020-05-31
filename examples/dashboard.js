@@ -71,7 +71,7 @@ new Vue({
     responsive: true,
     index: 0,
   },
-    /*
+  /*
       mounted: function () {
           this.index = this.layout.length;
       },
@@ -99,7 +99,7 @@ new Vue({
               this.layout.push(item);
           }
       }
-  
+  */
 });
 
 /*
