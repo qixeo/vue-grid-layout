@@ -31,10 +31,6 @@
   vertical-align: middle;
 }
 
-.settingsLink > img {
-  /* vertical-align: middle; */
-}
-
 .card-content {
   display: -webkit-box;
   display: -webkit-flex;
