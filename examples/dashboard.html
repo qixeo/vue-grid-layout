@@ -7,9 +7,11 @@
       name="viewport"
       content="initial-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/box-sizing.css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Inconsolata">
     <!--<link rel="stylesheet" href="../dist/vue-grid-layout.css">-->
   </head>
   <body>
@@ -55,8 +57,8 @@
 
             <div class="card-content">
                 <div class="card-top-bar w-clearfix">
-                    <h6 class="card-title">{{item.i}}</h6>
-                    <div class="settingsIcon"><img src="images/settings-24px.svg" width="20" alt="" /></div>
+                    <div class="card-title"><p>{{item.i}}</p></div>
+                    <a href="#"><div class="settingsLink"><img src="images/settings-24px.svg" width="20" alt="" /></div></a>
                   </div>
               <div class="reading-value">{{item.reading}}</div>
               <div class="reading-label">{{item.readingLabel}}</div>
