@@ -46,7 +46,7 @@
 } */
 
 .vue-grid-item:not(.vue-grid-placeholder) {
-  background: rgb(218, 218, 218);
+  background: rgb(230, 230, 230);
   border-radius: 5px;
   overflow: hidden;
   display: flex;
